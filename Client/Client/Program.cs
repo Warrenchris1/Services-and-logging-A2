@@ -8,8 +8,12 @@ namespace Client
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Tester serverTester = new Tester();
+            serverTester.Run();
+
+
         }
     }
 }
