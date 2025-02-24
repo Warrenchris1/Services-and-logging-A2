@@ -10,10 +10,9 @@ namespace Client
     {
         static void Main()
         {
+            // run tester
             Tester serverTester = new Tester();
             serverTester.Run();
-
-
         }
     }
 }
