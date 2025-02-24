@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|solutionrelative:client\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|c:\\users\\admmo\\desktop\\nad_a3\\services-and-logging-a2\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|c:\\users\\admmo\\desktop\\nad_a3\\services-and-logging-a2\\client\\client\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|solutionrelative:client\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|c:\\users\\admmo\\desktop\\nad_a3\\services-and-logging-a2\\client\\client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E63A4C0-A937-4E1E-9D37-EDFF3EB2BA0F}|Client\\Client.csproj|solutionrelative:client\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "App.config",
               "DocumentMoniker": "C:\\Users\\admmo\\Desktop\\NAD_A3\\Services-and-logging-A2\\Client\\Client\\App.config",
               "RelativeDocumentMoniker": "Client\\App.config",
               "ToolTip": "C:\\Users\\admmo\\Desktop\\NAD_A3\\Services-and-logging-A2\\Client\\Client\\App.config",
               "RelativeToolTip": "Client\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2025-02-23T23:45:38.917Z",
               "EditorCaption": ""
@@ -45,20 +45,20 @@
               "RelativeDocumentMoniker": "Client\\Tester.cs",
               "ToolTip": "C:\\Users\\admmo\\Desktop\\NAD_A3\\Services-and-logging-A2\\Client\\Client\\Tester.cs",
               "RelativeToolTip": "Client\\Tester.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAApwEwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T23:38:45.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\admmo\\Desktop\\NAD_A3\\Services-and-logging-A2\\Client\\Client\\Program.cs",
               "RelativeDocumentMoniker": "Client\\Program.cs",
               "ToolTip": "C:\\Users\\admmo\\Desktop\\NAD_A3\\Services-and-logging-A2\\Client\\Client\\Program.cs",
               "RelativeToolTip": "Client\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-23T22:36:20.421Z",
               "EditorCaption": ""

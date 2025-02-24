@@ -4,6 +4,7 @@ using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net.Sockets;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace Client
 {
     internal class Tester
     {
-        enum menuOptions //the different types of tests that can be performed
+        private enum menuOptions //the different types of tests that can be performed
         {
             manualTest = 1,
             automaticTest = 2,
@@ -23,6 +24,7 @@ namespace Client
         private int port = int.Parse(ConfigurationManager.AppSettings["serverPort"]);
         private string entriesFile = ConfigurationManager.AppSettings["entriesFile"]; //automatic test entries' file
         private int abuseEntriesCount = 1000; //the number of entries to send when testing the abuse-prevention mechanism
+        private string clientID = "TestingClient"; //the identifier of this tester
 
 
         // this function runs in a loop that allows the user to continuously select a test to perform or quit the program
@@ -83,7 +85,6 @@ namespace Client
         {
             Console.WriteLine("\nEnter an entry to log:");
             string entry = Console.ReadLine();
-
             sendEntry(ipAddress, port, entry);
         }
 
@@ -97,6 +98,7 @@ namespace Client
                 string entry;
                 while ((entry = reader.ReadLine()) != null)
                 {
+                    entry = getUTCTime() + entry;
                     sendEntry(ipAddress, port, entry);
                 }
             }
@@ -107,9 +109,10 @@ namespace Client
         // this function sends a large volume of entries to the server in order to test its abuse-prevention mechanism
         private void abusePreventionTest()
         {
-            string entry = "bla bla bla";
             for (int c = 0; c < abuseEntriesCount; c++)
             {
+                string currentTime = getUTCTime();
+                string entry = $"{currentTime}|{clientID}|Abuse|This message is abusive.";
                 sendEntry(ipAddress, port, entry);
             }
         }
@@ -134,6 +137,14 @@ namespace Client
             }
 
             return selectedOption;
+        }
+
+        // this functions returns the current time in UTC format
+        private string getUTCTime()
+        {
+            DateTime currentTime = DateTime.UtcNow;
+            string formattedTime = currentTime.ToString("yyyy-MM-ddTHH:mm:ss");
+            return formattedTime;
         }
     }
 }
