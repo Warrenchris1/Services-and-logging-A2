@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -20,12 +21,11 @@ namespace Client
 
         private string ipAddress = ConfigurationManager.AppSettings["serverIP"];
         private int port = int.Parse(ConfigurationManager.AppSettings["serverPort"]);
+        private string entriesFile = ConfigurationManager.AppSettings["entriesFile"];
+
 
         internal void Run()
         {
-
-
-
             while (true)
             { 
                 menuOptions userChoice = showMenu();
@@ -36,8 +36,9 @@ namespace Client
                         break;
 
                     case menuOptions.automaticTest:
-
+                        automaticTest();
                         break;
+
                     case menuOptions.abusePreventionTest:
 
                         break;
@@ -53,7 +54,7 @@ namespace Client
         }
 
 
-
+        // this function sends the specified entry to the server
         private void sendEntry(string ipAddress, int portNumber, string entry)
         {
             // initialize connection with server
@@ -82,13 +83,29 @@ namespace Client
             sendEntry(ipAddress, port, entry);
         }
 
+        // this functions read the automatic entries file and sends each one to the server - testing each scenario
+        private void automaticTest()
+        {
+            StreamReader reader;
+            using (reader = new StreamReader(entriesFile))
+            {
+                string entry;
+                while ((entry = reader.ReadLine()) != null)
+                {
+                    sendEntry(ipAddress, port, entry);
+                }
+            }
+
+            reader.Close();
+        }
+
 
 
         // this function displays the menu and gets the user to select an option
         private menuOptions showMenu()
         {
             /* show menu */
-            Console.WriteLine("Select a test to perform: \n\t 1.Manually configured entry. \n\t " +
+            Console.WriteLine("\nSelect a test to perform: \n\t 1.Manually configured entry. \n\t " +
                 "2.Automated test (tests all message types). \n\t 3.Abuse prevention test.");
 
             /* loop until user selects a menu option */
