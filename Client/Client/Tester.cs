@@ -98,7 +98,6 @@ namespace Client
                 string entry;
                 while ((entry = reader.ReadLine()) != null)
                 {
-                    entry = getUTCTime() + entry;
                     sendEntry(ipAddress, port, entry);
                 }
             }
@@ -111,8 +110,7 @@ namespace Client
         {
             for (int c = 0; c < abuseEntriesCount; c++)
             {
-                string currentTime = getUTCTime();
-                string entry = $"{currentTime}|{clientID}|Abuse|This message is abusive.";
+                string entry = $"{clientID}|Abuse|This message is abusive.";
                 sendEntry(ipAddress, port, entry);
             }
         }
