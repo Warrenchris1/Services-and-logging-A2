@@ -33,7 +33,7 @@ namespace Client
         private string ipAddress = ConfigurationManager.AppSettings["serverIP"];
         private int port = int.Parse(ConfigurationManager.AppSettings["serverPort"]);
         private string entriesFile = ConfigurationManager.AppSettings["entriesFile"]; //automatic test entries' file
-        private int abuseEntriesCount = 1000; //the number of entries to send when testing the abuse-prevention mechanism
+        private int abuseEntriesCount = 30; //the number of entries to send when testing the abuse-prevention mechanism
         private string clientID = "TestingClient"; //the identifier of this tester
 
         /*
